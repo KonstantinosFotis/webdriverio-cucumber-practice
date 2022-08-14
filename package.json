@@ -21,8 +21,9 @@
   },
   "scripts": {
     "install:clean": "rm -rf node_modules && npm install",
-    "test:all": "./node_modules/.bin/wdio config/wdio.shared.conf.js",
-    "test:spec": "./node_modules/.bin/wdio config/wdio.shared.conf.js --spec",
+    "test:all": "./node_modules/.bin/wdio config/wdio.local.conf.js",
+    "test:spec": "./node_modules/.bin/wdio config/wdio.local.conf.js --spec",
+    "test:ci": "./node_modules/.bin/wdio config/wdio.ci.conf.js --spec",
     "eslint": "eslint \"**/*.js\" --ignore-pattern node_modules/ --ignore-pattern reports/ --ignore-pattern config/",
     "eslint:fix": "eslint \"**/*.js\" --ignore-pattern node_modules/ --ignore-pattern reports/ --fix"
   },
