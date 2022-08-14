@@ -1,6 +1,3 @@
-export default class BasePage {
+export default class BaseComponent {
 
-    async open(path) {
-        await browser.url(path);
-    }
 }

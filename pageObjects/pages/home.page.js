@@ -1,6 +1,14 @@
-export default class BasePage {
+import BasePage from './base.page';
 
-    async open(path) {
-        await browser.url(path);
+class HomePage extends BasePage {
+    get homePageSlider() {
+        return $('#homepage-slider');
+    }
+
+    async open() {
+        await super.open('/');
+        expect(await this.homePageSlider.isDisplayed()).to.equal(true, 'Home page slider is not displayed');
     }
 }
+
+export default new HomePage();
