@@ -1,0 +1,37 @@
+{
+  "name": "webdriverio-cucumber-practice",
+  "version": "1.0.0",
+  "description": "Project for practicing on webdriverio and cucumber frameworks",
+  "dependencies": {
+    "@wdio/cucumber-framework": "^7.20.8",
+    "@wdio/devtools-service": "^7.20.9",
+    "@wdio/local-runner": "^7.20.9",
+    "@wdio/spec-reporter": "^7.20.8",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "chai-webdriverio": "^1.0.0",
+    "chromedriver": "^104.0.0",
+    "eslint": "^8.22.0",
+    "eslint-config-google": "^0.14.0",
+    "fs-extra": "^10.1.0",
+    "multiple-cucumber-html-reporter": "^1.21.6",
+    "wdio-chromedriver-service": "^7.2.8",
+    "wdio-cucumberjs-json-reporter": "^4.4.3",
+    "webdriverio": "^7.20.9"
+  },
+  "scripts": {
+    "install:clean": "rm -rf node_modules && npm install",
+    "test:all": "./node_modules/.bin/wdio config/wdio.shared.conf.js",
+    "test:spec": "./node_modules/.bin/wdio config/wdio.shared.conf.js --spec",
+    "eslint": "eslint \"**/*.js\" --ignore-pattern node_modules/ --ignore-pattern reports/ --ignore-pattern config/",
+    "eslint:fix": "eslint \"**/*.js\" --ignore-pattern node_modules/ --ignore-pattern reports/ --fix"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/register": "^7.18.9",
+    "@wdio/cli": "^7.20.9"
+  }
+}
