@@ -13,6 +13,11 @@ Feature: Home Page
       | contact us button    | Contact us                |
     And I should see the header logo
     And I should see the header search box
-    And I should verify the search box text
+    And I should verify that the search box text is "Search"
     And I should see the header shopping cart
     And I should verify that the shopping cart text is "Cart (empty)"
+
+  Scenario: Verify the search box functionality
+    When I enter "test" on the search box
+    And I click the search box button
+#    Then
